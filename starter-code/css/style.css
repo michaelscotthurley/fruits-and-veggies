@@ -1,1 +1,38 @@
 /* file for your css */
+
+body {
+  background-image: url('fruitnveg.jpg');
+  color: white;
+}
+
+.title-text {
+  background-color: #cce0ff;
+} 
+
+/*.col-heading {
+  margin: 1px;
+}*/
+
+.btn-success {
+  background-color: #AAD023;
+  border-color: #6CBA2C;
+} 
+
+.btn-success:hover {
+  background-color: #FFCC00;
+}
+
+.well {
+  background-color: #cccccc;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+
+.left-button {
+  float: left;
+}
+
+.right-button {
+  float: right;
+}

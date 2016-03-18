@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="FruitsAndVeggies">
     <head>
-        <title>Fruit and Veggies</title>
+        <title>Fruits and Veggies</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-
+        <script src="js/sweetalert.min.js"></script> <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
         <script src="js/fruit_and_veggies_test.js"></script>
         <script src="js/app.js"></script>
     </head>
     <body>
-        <div class="container">
-            <h1>Fruit and Veggies</h1>
+        <div ng-controller="GameCtrl" class="container">
+            <div class="title-text">
+                <h1 class="text-center">Fruits and Veggies</h1>
+            </div>
             <div class="row">
-                <div class="col-sm-4">
-                    col 1
+                <div class="col-sm-4 title-text col-heading">
+                    <h3 class="text-center">Fruits</h3>
+                    <div class="well text-center" ng-repeat="item in myFruits">
+                    {{item}}
+                    <button type="button" ng-click="moveCenterFromLeft($index)" class="btn btn-success btn-right right-button"><span class="glyphicon glyphicon-menu-right"></span>
+                    </button>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                    col 2
+                <div class="col-sm-4 title-text col-heading">
+                    <h3 class="text-center">Pool</h3>
+                        <div class="well text-center" ng-repeat="item in shufflePool track by $index">
+                        <button type="button" ng-click="moveLeft($index)" class="btn btn-success btn-left left-button"><span class="glyphicon glyphicon-menu-left"></span>
+                        </button>
+                        {{item}}
+                        <button type="button" ng-click="moveRight($index)" class="btn btn-success btn-right right-button"><span class="glyphicon glyphicon-menu-right"></span>
+                        </button>
+                        </div>
                 </div>
-                <div class="col-sm-4">
-                    col 3
+                <div class="col-sm-4 title-text col-heading">
+                    <h3 class="text-center">Veggies</h3>
+                     <div class="well text-center" ng-repeat="item in myVeggies track by $index">
+                     <button type="button" ng-click="moveCenterFromRight($index)" class="btn btn-success btn-left left-button"><span class="glyphicon glyphicon-menu-left"></span>
+                    </button>
+                    {{item}}
+                    </div>
                 </div>                        
             </div>
         </div>
