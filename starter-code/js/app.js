@@ -9,9 +9,13 @@ app.controller('GameCtrl', ['$scope', function($scope) {
   $scope.moveRight = function(idx) {
     $scope.myVeggies.push($scope.shufflePool[idx]);
     $scope.shufflePool.splice(idx, 1)
-    if ($scope.checkWin()) {
-      swal("Congrats!", "You really know your produce!", "success")
-    }
+      if ($scope.checkWin()) {
+        swal("Congrats!", "You really know your produce!", "success")
+      }
+      if ($scope.checkWin() == false) {
+        swal("Sorry.", "You mixed up your produce.", "error")
+      }
+
     console.log($scope.myVeggies.length);
     console.log($scope.myVeggies);
   }
@@ -22,6 +26,9 @@ app.controller('GameCtrl', ['$scope', function($scope) {
     if ($scope.checkWin()) {
       swal("Congrats!", "You really know your produce!", "success")
     }
+    if ($scope.checkWin() == false) {
+        swal("Sorry.", "You mixed up your produce.", "error")
+      }
     console.log($scope.myFruits.length);
     console.log($scope.myFruits);
   }

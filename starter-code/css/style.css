@@ -7,11 +7,8 @@ body {
 
 .title-text {
   background-color: #cce0ff;
+  text-shadow: 4px 4px 8px gray;
 } 
-
-/*.col-heading {
-  margin: 1px;
-}*/
 
 .btn-success {
   background-color: #AAD023;
@@ -25,9 +22,9 @@ body {
 .well {
   background-color: #cccccc;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 18px;
+  text-shadow: 4px 4px 8px gray;
 }
-
 
 .left-button {
   float: left;
